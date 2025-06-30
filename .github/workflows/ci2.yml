@@ -25,7 +25,7 @@ jobs:
           tags: |
             nickchengw/gw-ci-web-test:latest
             nickchengw/gw-ci-web-test:${{ github.sha }}
-          build-args: |
+          secrets: |
             TURBO_TOKEN=${{ secrets.TURBO_TOKEN }}
             TURBO_TEAM=${{ vars.TURBO_TEAM }}
           cache-from: type=gha,scope=web
@@ -51,7 +51,7 @@ jobs:
           tags: |
             nickchengw/gw-ci-docs-test:latest
             nickchengw/gw-ci-docs-test:${{ github.sha }}
-          build-args: |
+          secrets: |
             TURBO_TOKEN=${{ secrets.TURBO_TOKEN }}
             TURBO_TEAM=${{ vars.TURBO_TEAM }}
           cache-from: type=gha,scope=docs
